@@ -1,20 +1,11 @@
-interface Expense {
-  id: number
-  description: string
-  amount: number
-  category: string
-}
-
-interface ListTrackerProps {
-  expenses: Expense[]
-}
+import type { ListTrackerProps } from "../types"
 
 export function ListTracker({ expenses }: ListTrackerProps) {
   return (
     <div className="w-1/3">
-      <h2 className="mb-3 text-2xl">Expenses</h2>
-      <table className="w-full text-left text-sm text-gray-500 shadow-md dark:text-gray-400 sm:rounded-lg">
-        <thead className="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
+      <h2 className="mb-3 text-2xl">Expenses List</h2>
+      <table className="w-full text-left text-sm text-gray-500 sm:rounded-lg">
+        <thead className="bg-gray-50 text-xs uppercase text-gray-700">
           <tr>
             <th scope="col" className="px-6 py-3">
               Description
